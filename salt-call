@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3.7
 # EASY-INSTALL-ENTRY-SCRIPT: 'salt==3005.1','console_scripts','salt-call'
 __requires__ = 'salt==3005.1'
 import re
