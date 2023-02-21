@@ -1,23 +1,12 @@
-pycharm2018:
-  archive:
-    - if_missing: /opt/pycharm-community-2018.3.4
-    - extracted
-    - name: /opt/
-    - source: https://download-cf.jetbrains.com/python/pycharm-community-2018.3.4.tar.gz
-    - source_hash: md5=540081c8118af80422b9e95b5ec44b40
-    - archive_format: tar
-    - tar_options: z
-    - keep: true
-    - user: root
-    - group: root
+{% set version = "pycharm-community-2022.3.2" %}
 
-pycharm2020:
+pycharm:
   archive:
-    - if_missing: /opt/pycharm-community-2020.3.3
+    - if_missing: /opt/{{ version }}
     - extracted
     - name: /opt/
-    - source: https://download-cf.jetbrains.com/python/pycharm-community-2020.3.3.tar.gz
-    - source_hash: md5=12e20683a01fb7182a029fe1ceeeed95
+    - source: https://download-cf.jetbrains.com/python/{{ version }}.tar.gz
+    - source_hash: md5=dcaf746d38ba0582d830aeba63f26ec7
     - archive_format: tar
     - tar_options: z
     - keep: true
@@ -27,8 +16,7 @@ pycharm2020:
 /opt/pycharm:
   cmd.run:
     - name: |
-        test -d /opt/pycharm-community-2020.3.3 && ln -s /opt/pycharm-community-2020.3.3 /opt/pycharm && exit
-        test -d /opt/pycharm-community-2018.3.4 && ln -s /opt/pycharm-community-2018.3.4 /opt/pycharm && exit
+        test -d /opt/{{ version }} && ln -s /opt/{{ version }} /opt/pycharm && exit
     - unless: test -h /opt/pycharm
 
 /usr/local/bin/pycharm:

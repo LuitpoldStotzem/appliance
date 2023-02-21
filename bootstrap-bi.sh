@@ -22,7 +22,7 @@ fi
 USERHOME="/home/$USER"
 
 if [[ $# -eq 0 ]] ; then
-    BRANCH="master2"
+    BRANCH="master_deb10"
 else
     BRANCH="$1"
 fi
@@ -88,7 +88,8 @@ if ! [ -x "$(command -v git)" ]; then
 fi
 
 if [ ! -d appliance ]; then
-    git clone https://github.com/plan-net/appliance.git
+    #git clone https://github.com/plan-net/appliance.git
+    git clone https://github.com/LuitpoldStotzem/appliance.git
 else
     cd appliance
     git pull

@@ -30,8 +30,9 @@ cleanup_hosts_2:
 
         # prod database
         # ----------------------------------------------------------------------
-        10.249.1.70	pnbi_mongodb1 mongodb1
-        10.249.1.71	pnbi_mongodb2 mongodb2
+        10.249.1.30     pnbi_mongodb1 mongodb1
+        10.249.1.31     pnbi_mongodb2 mongodb2
+
         10.249.1.3	pnbi_mongodb_rs2 mongodb_rs2
         10.249.1.4	pnbi_mongodb_rs3 mongodb_rs3
 

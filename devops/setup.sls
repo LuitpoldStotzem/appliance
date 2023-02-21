@@ -1,7 +1,7 @@
 /etc/apt/sources.list.d/salt.list:
   file.managed:
     - contents: |
-        deb https://repo.saltproject.io/py3/debian/9/amd64/archive/3003.4 stretch main
+        deb https://repo.saltproject.io/py3/debian/9/amd64/archive/3005.1 buster main
 
 include:
   - .software
@@ -17,4 +17,4 @@ include:
   - .zsh
   - .askpass
   - .core4
-  - .core3
+  #- .core3

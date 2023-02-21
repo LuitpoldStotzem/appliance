@@ -1,4 +1,4 @@
-{% set version = "mongodb-linux-x86_64-debian92-4.0.13" %}
+{% set version = "mongodb-linux-x86_64-debian10-4.4.18" %}
 
 mongo_group:
   group.present:
@@ -39,7 +39,7 @@ mongo_archive:
     - extracted
     - name: /srv/
     - source: https://fastdl.mongodb.org/linux/{{ version }}.tgz
-    - source_hash: md5=66905685ed6859c2fbe70de562917e7d
+    - source_hash: md5=485bff20c453b865b6cd37349652c258
     - archive_format: tar
     - tar_options: z
     - keep: false
@@ -75,9 +75,6 @@ mongo_keyfile:
         processManagement:
             pidFilePath: "/srv/mongodb/log/mongod.lock"
 
-        replication:
-           oplogSizeMB: 1000
-           replSetName: rs0
 
 setup_mongo:
   cmd.script:
