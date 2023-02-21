@@ -43,10 +43,10 @@ kill_mongo
 
 echo "start service (step 2)"
 /usr/bin/chpst -u mongo /srv/mongodb/bin/mongod --fork -f /srv/mongodb/local.conf
-until echo "rs.status()" | /srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 | grep '"ok" : 1';
-    do
-      sleep 1
-    done
+#until echo "rs.status()" | /srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 | grep '"ok" : 1';
+#    do
+#      sleep 1
+#    done
 
 sleep 10
 
