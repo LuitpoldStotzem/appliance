@@ -1,7 +1,7 @@
 /etc/apt/sources.list.d/salt.list:
   file.managed:
     - contents: |
-        deb https://repo.saltproject.io/py3/debian/9/amd64/archive/3005.1 buster main
+        deb https://repo.saltproject.io/py3/debian/10/amd64/archive/3005.1 buster main
 
 include:
   - .software
