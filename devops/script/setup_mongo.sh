@@ -22,21 +22,21 @@ echo "start service (step 1)"
 /usr/bin/chpst -u mongo /srv/mongodb/bin/mongod --fork -f /srv/mongodb/local.conf
 alive
 
-cat > repl.js <<- .
-conn = new Mongo('mongodb://localhost:27017');
-db = conn.getDB("admin");
-rs.initiate();
-.
-
-echo "enable replication"
-/srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 < repl.js
-rm repl.js
-
-echo "waiting for replica set"
-until echo "rs.status()" | /srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 | grep '"ok" : 1';
-    do
-      sleep 1
-    done
+#cat > repl.js <<- .
+#conn = new Mongo('mongodb://localhost:27017');
+#db = conn.getDB("admin");
+#rs.initiate();
+#.
+#
+#echo "enable replication"
+#/srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 < repl.js
+#rm repl.js
+#
+#echo "waiting for replica set"
+#until echo "rs.status()" | /srv/mongodb/bin/mongo --host 127.0.0.1 --port 27017 | grep '"ok" : 1';
+#    do
+#      sleep 1
+#    done
 
 echo "kill existing mongodb service (step 2)"
 kill_mongo
