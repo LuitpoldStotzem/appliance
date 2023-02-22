@@ -15,9 +15,9 @@ if [[ $AUTO -ne 1 ]]; then
 fi
 
 if [ -n "$SUDO_USER" ]; then
-    USER="${SUDO_USER:-$USER}"
-else
     USER="${SUDO_USER:-$(whoami)}"
+else
+    USER="${SUDO_USER:-$USER}"
 fi
 USERHOME="/home/$USER"
 
