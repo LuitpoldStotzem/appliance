@@ -4,7 +4,6 @@
 # bash bootstrap-bi.sh
 
 if (( $EUID != 0 )); then
-    username = $(whoami)
     echo "restarting as root, please enter your password ..."
     su -c "export AUTO=1; export PATH=$PATH:/usr/sbin; cd $PWD; /bin/bash $0 $*"
     exit

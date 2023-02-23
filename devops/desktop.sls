@@ -7,7 +7,8 @@
 setup_desktop:
   cmd.script:
     - source: salt://script/setup_desktop.py
-    - runas: {{ username }}
+    - user: root
+    #- runas: {{ username }}
 
 /etc/gdm3/daemon.conf:
   file.append:
