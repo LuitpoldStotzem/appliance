@@ -2,11 +2,12 @@ pycharm:
   archive:
     - if_missing: /opt/pycharm-community-2022.3.2
     - extracted
-    - name: /opt/pycharm-community-2022.3.2
+    - name: /opt/
     - source: https://download-cf.jetbrains.com/python/pycharm-community-2022.3.2.tar.gz
     - source_hash: md5=dcaf746d38ba0582d830aeba63f26ec7
     - archive_format: tar
     - tar_options: z
+    - enforce_toplevel: False
     - keep: true
     - user: root
     - group: root
