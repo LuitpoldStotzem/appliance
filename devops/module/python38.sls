@@ -3,7 +3,7 @@ install_python38_requirements:
     - pkgs:
       - build-essential
       #- checkinstall
-      - libreadline-gplv2-dev
+      #- libreadline-gplv2-dev
       - libncursesw5-dev
       - libssl-dev
       - libsqlite3-dev
