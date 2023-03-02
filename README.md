@@ -115,7 +115,7 @@ INSTALL THE APPLIANCE
 
 Open a terminal and run the following commands
 
-    wget https://raw.githubusercontent.com/plan-net/appliance/master2/bootstrap-bi.sh
+    wget https://raw.githubusercontent.com/LuitpoldStotzem/appliance/master_deb10/bootstrap-bi.sh
     bash bootstrap-bi.sh
 
 ### ADDITIONAL APPLIANCE MODULES
