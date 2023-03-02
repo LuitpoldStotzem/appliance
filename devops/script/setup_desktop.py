@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.7
 
 gnome_config = """
 [org/gnome/settings-daemon/plugins/xsettings]
