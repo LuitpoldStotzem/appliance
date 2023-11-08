@@ -17,6 +17,8 @@ system_prerequisites:
       - runit
       - runit-systemd
       - zsh
+      - python3-dev
+      - python3-venv
       - libgconf-2-4
       - build-essential
       - libappindicator3-1
